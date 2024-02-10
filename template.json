@@ -1,0 +1,69 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "botServices_Aarthy_endpoint": {
+            "type": "SecureString"
+        },
+        "botServices_Aarthy_name": {
+            "defaultValue": "Aarthy",
+            "type": "String"
+        },
+        "userAssignedIdentities_Aarthy_externalid": {
+            "defaultValue": "/subscriptions/4dd868eb-b358-4789-85f8-d2d01214cdc1/resourceGroups/lifestyle/providers/Microsoft.ManagedIdentity/userAssignedIdentities/Aarthy",
+            "type": "String"
+        }
+    },
+    "variables": {},
+    "resources": [
+        {
+            "type": "Microsoft.BotService/botServices",
+            "apiVersion": "2022-06-15-preview",
+            "name": "[parameters('botServices_Aarthy_name')]",
+            "location": "global",
+            "sku": {
+                "name": "F0"
+            },
+            "kind": "azurebot",
+            "properties": {
+                "displayName": "[parameters('botServices_Aarthy_name')]",
+                "iconUrl": "https://docs.botframework.com/static/devportal/client/images/bot-framework-default.png",
+                "msaAppId": "2b14b3f6-338c-47c9-aeb3-2793c392c8bc",
+                "msaAppTenantId": "21053df3-c9b7-401a-b3a2-413a34be70a0",
+                "msaAppType": "UserAssignedMSI",
+                "msaAppMSIResourceId": "[parameters('userAssignedIdentities_Aarthy_externalid')]",
+                "luisAppIds": [],
+                "isStreamingSupported": false,
+                "schemaTransformationVersion": "1.3",
+                "tenantId": "21053df3-c9b7-401a-b3a2-413a34be70a0",
+                "isCmekEnabled": false,
+                "disableLocalAuth": false,
+                "endpoint": "[parameters('botServices_Aarthy_endpoint')]"
+            }
+        },
+        {
+            "type": "Microsoft.BotService/botServices/channels",
+            "apiVersion": "2022-06-15-preview",
+            "name": "[concat(parameters('botServices_Aarthy_name'), '/WebChatChannel')]",
+            "location": "global",
+            "dependsOn": [
+                "[resourceId('Microsoft.BotService/botServices', parameters('botServices_Aarthy_name'))]"
+            ],
+            "properties": {
+                "properties": {
+                    "sites": [
+                        {
+                            "siteName": "Default Site",
+                            "isEnabled": true,
+                            "isWebchatPreviewEnabled": true,
+                            "isBlockUserUploadEnabled": false
+                        }
+                    ]
+                },
+                "etag": "W/\"49300d306b15d25625ce7df7a706285a12/1/2022 9:02:20 AM\"",
+                "channelName": "WebChatChannel",
+                "location": "global"
+            }
+        }
+    ]
+}
