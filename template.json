@@ -2,14 +2,14 @@
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "botServices_Aarthy_endpoint": {
+        "botServices_Ashish_endpoint": {
             "type": "SecureString"
         },
-        "botServices_Aarthy_name": {
-            "defaultValue": "Aarthy",
+        "botServices_Ashish_name": {
+            "defaultValue": "Ashish",
             "type": "String"
         },
-        "userAssignedIdentities_Aarthy_externalid": {
+        "userAssignedIdentities_Ashish_externalid": {
             "defaultValue": "/subscriptions/4dd868eb-b358-4789-85f8-d2d01214cdc1/resourceGroups/lifestyle/providers/Microsoft.ManagedIdentity/userAssignedIdentities/Aarthy",
             "type": "String"
         }
