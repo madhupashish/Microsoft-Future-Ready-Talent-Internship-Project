@@ -1,4 +1,4 @@
-<img width="960" alt="image" src="https://github.com/madhupashish/Microsoft-Future-Ready-Talent-Internship-Project/assets/119279720/20f8ca0f-a927-4afb-bcd6-eab6d4660c69"># Microsoft-Future-Ready-Talent-Internship-Project
+# Microsoft-Future-Ready-Talent-Internship-Project
 This project was developed as part of the Microsoft Future Ready Talent Virtual Internship Program.
 
 ## Project Title :  E-Commerce system Website
@@ -28,7 +28,7 @@ Link : https://ecommerceclothing.azurewebsites.net/
 <img width="960" alt="Screenshot 2024-02-29 141054" src="https://github.com/madhupashish/Microsoft-Future-Ready-Talent-Internship-Project/assets/119279720/0dea7641-ecf7-4cc7-bb47-482fed05adf8">
 <img width="960" alt="Screenshot 2024-02-29 141058" src="https://github.com/madhupashish/Microsoft-Future-Ready-Talent-Internship-Project/assets/119279720/02380435-8bd1-4648-a3c2-05901b5f8cfc">
 <img width="960" alt="Screenshot 2024-02-29 141545" src="https://github.com/madhupashish/Microsoft-Future-Ready-Talent-Internship-Project/assets/119279720/236fa119-464e-439c-90c1-539ff6f636ad">
-
+<img width="960" alt="image" src="https://github.com/madhupashish/Microsoft-Future-Ready-Talent-Internship-Project/assets/119279720/20f8ca0f-a927-4afb-bcd6-eab6d4660c69">
 
 
 
